@@ -5,16 +5,16 @@
 
 
 
-string[] array1 = new string[] {"1234", "1567", "-2", "computer science"};
-string[] array2 = new string[array1.Length];
-void SecondArrayWithIF(string[] array1, string[] array2)
+string[] inputArray = new string[] {"1234", "1567", "-2", "computer science"};
+string[] resultArray = new string[inputArray.Length];
+void stringTrimmingMethod(string[] inputArray, string[] resultArray)
 {
     int count = 0;
-    for (int i = 0; i < array1.Length; i++)
+    for (int i = 0; i < inputArray.Length; i++)
     {
-    if(array1[i].Length <= 3)
+    if(inputArray[i].Length <= 3)
         {
-        array2[count] = array1[i];
+        resultArray[count] = inputArray[i];
         count++;
         }
     }
@@ -27,5 +27,5 @@ void PrintArray(string[] array)
     }
     Console.WriteLine();
 }
-SecondArrayWithIF(array1, array2);
-PrintArray(array2);
+stringTrimmingMethod(inputArray, resultArray);
+PrintArray(resultArray);
